@@ -1,0 +1,24 @@
+<%= link_to 'Back', books_path %>
+
+<div>
+    <h2>Delete Book</h2>
+
+    <%= form_for(@book, :method => 'delete') do |f| %>
+
+        <p>Are you sure you want permanently delete this book?</p>
+        <strong>Title:</strong>
+        <p class="reference-name"><%= f.object.title %></p>
+        <strong>Author:</strong>
+        <p class="reference-name"><%= f.object.author %></p>
+        <strong>Price:</strong>
+        <p class="reference-name"><%= f.object.price %></p>
+        <strong>Publish Date:</strong>
+        <p class="reference-name"><%= f.object.date %></p>
+
+        <div class="form-buttons">
+            <%= f.submit("Delete Book") %>
+        </div>
+
+    <% end %>
+
+</div>
