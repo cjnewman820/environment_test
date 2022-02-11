@@ -4,4 +4,6 @@ class Book < ApplicationRecord
     validates :price, presence: true
     validates :date, presence: true
 
+    has_many :user
+
 end
